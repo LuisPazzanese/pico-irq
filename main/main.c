@@ -16,8 +16,8 @@
 
 volatile bool play_dot  = false;
 volatile bool play_dash = false;
-static absolute_time_t last_btn1_time;
-static absolute_time_t last_btn2_time;
+static volatile absolute_time_t last_btn1_time;
+static volatile absolute_time_t last_btn2_time;
 
 void play_tone(uint32_t freq_hz, uint32_t duration_ms, uint pin) {
     gpio_put(pin, 0);
